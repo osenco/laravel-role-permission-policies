@@ -35,6 +35,12 @@ Because all permissions will be registered on [Laravel's gate](https://laravel.c
 $user->can('edit articles');
 ```
 
+## Installation
+
+```bash
+composer require osenco/laravel-role-permission-policies
+```
+
 ## Filament
 
 Please see [FILAMENT](FILAMENT.md) for how to setup on Filament.

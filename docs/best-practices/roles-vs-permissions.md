@@ -1,7 +1,4 @@
----
-title: Roles vs Permissions
-weight: 1
----
+# Roles vs Permissions
 
 Best-Practice for thinking about Roles vs Permissions is this:
 

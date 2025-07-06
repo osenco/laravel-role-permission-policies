@@ -1,7 +1,4 @@
----
-title: Wildcard permissions
-weight: 6
----
+# Wildcard permissions
 
 When enabled, wildcard permissions offers you a flexible representation for a variety of permission schemes. 
 

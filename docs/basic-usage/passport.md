@@ -1,7 +1,4 @@
----
-title: Passport Client Credentials Grant usage
-weight: 12
----
+# Passport Client Credentials Grant usage
 
 **NOTE** currently this only works for Laravel 9 and Passport 11 and newer.
 

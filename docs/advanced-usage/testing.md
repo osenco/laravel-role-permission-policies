@@ -1,7 +1,4 @@
----
-title: Testing
-weight: 1
----
+# Testing
 
 ## Clear Cache During Tests
 

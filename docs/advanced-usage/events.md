@@ -1,7 +1,4 @@
----
-title: Events
-weight: 5
----
+# Events
 
 By default Events are not enabled, because not all apps need to fire events related to roles and permissions.
 

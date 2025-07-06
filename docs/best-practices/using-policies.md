@@ -1,7 +1,4 @@
----
-title: Model Policies
-weight: 2
----
+# Model Policies
 
 The best way to incorporate access control for application features is with [Laravel's Model Policies](https://laravel.com/docs/authorization#creating-policies).
 

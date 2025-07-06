@@ -1,7 +1,4 @@
----
-title: Extending
-weight: 4
----
+# Extending
 
 ## Adding fields to your models
 You can add your own migrations to make changes to the role/permission tables, as you would for adding/changing fields in any other tables in your Laravel project.

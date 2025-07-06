@@ -1,7 +1,4 @@
----
-title: Performance Tips
-weight: 10
----
+# Performance Tips
 
 On small apps, most of the following will be moot, and unnecessary.
 

@@ -1,7 +1,4 @@
----
-title: Direct Permissions
-weight: 2
----
+# Direct Permissions
 
 ## Best Practice
 

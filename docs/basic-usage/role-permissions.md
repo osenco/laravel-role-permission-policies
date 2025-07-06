@@ -1,7 +1,4 @@
----
-title: Using Permissions via Roles
-weight: 3
----
+# Using Permissions via Roles
 
 ## Assigning Roles
 

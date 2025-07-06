@@ -1,7 +1,4 @@
----
-title: Middleware
-weight: 11
----
+# Middleware
 
 ## Default Middleware
 

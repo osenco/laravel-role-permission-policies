@@ -1,7 +1,4 @@
----
-title: Using multiple guards
-weight: 9
----
+# Using multiple guards
 
 When using the default Laravel auth configuration all of the core methods of this package will work out of the box, with no extra configuration required.
 

@@ -1,7 +1,4 @@
----
-title: Prerequisites
-weight: 3
----
+# Prerequisites
 
 ## Laravel Version Compatibility
 

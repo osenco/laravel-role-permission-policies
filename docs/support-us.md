@@ -1,7 +1,4 @@
----
-title: Support us
-weight: 2
----
+# Support us
 
 We invest a lot of resources into creating [best in class open source packages](https://osen.be/open-source). You can support us by [buying one of our paid products](https://osen.be/open-source/support-us). 
 

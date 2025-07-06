@@ -1,7 +1,4 @@
----
-title: Artisan Commands
-weight: 10
----
+# Artisan Commands
 
 ## Creating roles and permissions with Artisan Commands
 

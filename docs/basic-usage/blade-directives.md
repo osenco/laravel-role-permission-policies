@@ -1,7 +1,4 @@
----
-title: Blade directives
-weight: 7
----
+# Blade directives
 
 ## Permissions
 This package lets you use Laravel's native `@can` directive to check if a user has a certain permission (whether you gave them that permission directly or if you granted it indirectly via a role):

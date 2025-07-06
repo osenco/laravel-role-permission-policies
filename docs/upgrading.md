@@ -1,7 +1,4 @@
----
-title: Upgrading
-weight: 6
----
+# Upgrading
 
 ## Upgrade Essentials
 
@@ -9,7 +6,7 @@ ALL upgrades of this package should follow these steps:
 
 1. Composer. Upgrading between major versions of this package always requires the usual Composer steps:
    - Update your `composer.json` to specify the new major version, for example: `^6.0`
-   - Then run `composer update osen/laravel-permission`. 
+   - Then run `composer update osenco/laravel-role-permission-policies`. 
 
 2. Migrations. Compare the `migration` file stubs in the NEW version of this package against the migrations you've already run inside your app. If necessary, create a new migration (by hand) to apply any new database changes.
 
@@ -23,8 +20,8 @@ ALL upgrades of this package should follow these steps:
 
 7. Apply any version-specific special updates as outlined below...
 
-8. Review the changelog, which details all the changes: [CHANGELOG](https://github.com/osenco/laravel-permission/blob/main/CHANGELOG.md)
-and/or consult the [Release Notes](https://github.com/osenco/laravel-permission/releases)
+8. Review the changelog, which details all the changes: [CHANGELOG](https://github.com/osenco/laravel-role-permission-policies/blob/main/CHANGELOG.md)
+and/or consult the [Release Notes](https://github.com/osenco/laravel-role-permission-policies/releases)
 
 
 ## Upgrading from v5 to v6
@@ -39,7 +36,7 @@ eg: if you have a custom model you will need to make changes, including accessin
 
     Be sure to compare your custom models with the originals to see what else may have changed.
 
-3. Model and Contract/Interface updates. The Role and Permission Models and Contracts/Interfaces have been updated with syntax changes to method signatures. Update any models you have extended, or contracts implemented, accordingly. See PR [#2380](https://github.com/osenco/laravel-permission/pull/2380) and [#2480](https://github.com/osenco/laravel-permission/pull/2480) for some of the specifics. 
+3. Model and Contract/Interface updates. The Role and Permission Models and Contracts/Interfaces have been updated with syntax changes to method signatures. Update any models you have extended, or contracts implemented, accordingly. See PR [#2380](https://github.com/osenco/laravel-role-permission-policies/pull/2380) and [#2480](https://github.com/osenco/laravel-role-permission-policies/pull/2480) for some of the specifics. 
 
 4. Migrations WILL need to be upgraded. (They have been updated to anonymous-class syntax that was introduced in Laravel 8, AND some structural coding changes in the registrar class changed the way we extracted configuration settings in the migration files.) There are no changes to the package's structure since v5, so if you had not customized it from the original then replacing the contents of the file should be enough. (Usually, the only customization is if you've switched to UUIDs or customized MySQL index name lengths.)
 **If you get the following error, it means your migration file needs upgrading: `Error: Access to undeclared static property Osen\Permission\PermissionRegistrar::$pivotPermission`**

@@ -1,7 +1,4 @@
----
-title: Example App
-weight: 90
----
+# Example App
 
 ## Creating A Demo App
 
@@ -38,7 +35,7 @@ sed -i '' 's/DB_DATABASE=/#DB_DATABASE=/' .env
 touch database/database.sqlite
 
 # Package
-composer require osen/laravel-permission
+composer require osenco/laravel-role-permission-policies
 php artisan vendor:publish --provider="Osen\Permission\PermissionServiceProvider"
 git add .
 git commit -m "Add Osen Laravel Permissions package"

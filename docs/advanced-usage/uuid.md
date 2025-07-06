@@ -1,7 +1,4 @@
----
-title: UUID/ULID
-weight: 7
----
+# UUID/ULID
 
 If you're using UUIDs (ULID, GUID, etc) for your User models or Role/Permission models there are a few considerations to note.
 

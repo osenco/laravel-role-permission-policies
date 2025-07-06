@@ -1,7 +1,4 @@
----
-title: Enums
-weight: 4
----
+# Enums
 
 ## Enum Prerequisites
 

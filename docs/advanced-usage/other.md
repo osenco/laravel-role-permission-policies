@@ -1,7 +1,4 @@
----
-title: Other
-weight: 9
----
+# Other
 
 **Schema Diagram:**
 

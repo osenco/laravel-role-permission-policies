@@ -1,7 +1,4 @@
----
-title: Custom Permission Check
-weight: 6
----
+# Custom Permission Check
 
 ## Default Permission Check Functionality
 By default, this package registers a `Gate::before()` method call on [Laravel's gate](https://laravel.com/docs/authorization). This method is responsible for checking if the user has the required permission or not, for calls to `can()` helpers and most `model policies`. Whether a user has a permission or not is determined by checking the user's permissions stored in the database.

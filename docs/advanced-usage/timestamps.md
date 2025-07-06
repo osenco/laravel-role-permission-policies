@@ -1,7 +1,4 @@
----
-title: Timestamps
-weight: 10
----
+# Timestamps
 
 ## Excluding Timestamps from JSON
 

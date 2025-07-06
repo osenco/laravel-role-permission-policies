@@ -1,7 +1,4 @@
----
-title: UI Options
-weight: 11
----
+# UI Options
 
 ## Need a UI?
 

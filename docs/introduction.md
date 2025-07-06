@@ -1,7 +1,4 @@
----
-title: Introduction
-weight: 1
----
+# Introduction
 
 This package allows you to manage user permissions and roles in a database.
 

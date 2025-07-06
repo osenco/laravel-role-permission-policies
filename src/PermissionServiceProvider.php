@@ -202,7 +202,7 @@ class PermissionServiceProvider extends ServiceProvider
                 ->keys()
                 ->whenEmpty(fn (Collection $collection) => $collection->push('Default'))
                 ->join(', '),
-            'Version' => InstalledVersions::getPrettyVersion('osen/laravel-permission'),
+            'Version' => InstalledVersions::getPrettyVersion('osenco/laravel-role-permission-policies'),
         ]);
     }
 }

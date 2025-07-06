@@ -1,7 +1,4 @@
----
-title: Database Seeding
-weight: 2
----
+# Database Seeding
 
 ## Flush cache before/after seeding
 

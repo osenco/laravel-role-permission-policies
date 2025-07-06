@@ -1,7 +1,4 @@
----
-title: Basic Usage
-weight: 1
----
+# Basic Usage
 
 ## Add The Trait
 First, add the `Osen\Permission\Traits\HasRoles` trait to your `User` model(s):

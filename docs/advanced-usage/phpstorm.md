@@ -1,7 +1,4 @@
----
-title: PhpStorm Interaction
-weight: 8
----
+# PhpStorm Interaction
 
 ## Extending PhpStorm 
 

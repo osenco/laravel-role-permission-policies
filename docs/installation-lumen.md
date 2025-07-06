@@ -1,7 +1,4 @@
----
-title: Installation in Lumen
-weight: 5
----
+# Installation in Lumen
 
 NOTE: Lumen is **not** officially supported by this package. And Lumen is no longer under active development.
 
@@ -14,15 +11,15 @@ Lumen installation instructions can be found in the [Lumen documentation](https:
 Install the permissions package via Composer:
 
 ``` bash
-composer require osen/laravel-permission
+composer require osenco/laravel-role-permission-policies
 ```
 
 Copy the required files:
 
 ```bash
 mkdir -p config
-cp vendor/osenco/laravel-permission/config/permission.php config/permission.php
-cp vendor/osenco/laravel-permission/database/migrations/create_permission_tables.php.stub database/migrations/2018_01_01_000000_create_permission_tables.php
+cp vendor/osenco/laravel-role-permission-policies/config/permission.php config/permission.php
+cp vendor/osenco/laravel-role-permission-policies/database/migrations/create_permission_tables.php.stub database/migrations/2018_01_01_000000_create_permission_tables.php
 ```
 
 You will also need the `config/auth.php` file. If you don't already have it, copy it from the vendor folder:
@@ -58,7 +55,7 @@ $app->register(App\Providers\AuthServiceProvider::class);
 
 Ensure the application's database name/credentials are set in your `.env` (or `config/database.php` if you have one), and that the database exists.
 
-NOTE: If you are going to use teams feature, you have to update your [`config/permission.php` config file](https://github.com/osenco/laravel-permission/blob/main/config/permission.php) and set `'teams' => true,`, if you want to use a custom foreign key for teams you must change `team_foreign_key`.
+NOTE: If you are going to use teams feature, you have to update your [`config/permission.php` config file](https://github.com/osenco/laravel-role-permission-policies/blob/main/config/permission.php) and set `'teams' => true,`, if you want to use a custom foreign key for teams you must change `team_foreign_key`.
 
 Run the migrations to create the tables for this package:
 
