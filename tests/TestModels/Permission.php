@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Tests\TestModels;
+namespace Osen\Permission\Tests\TestModels;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
-class Permission extends \Spatie\Permission\Models\Permission
+class Permission extends \Osen\Permission\Models\Permission
 {
     use SoftDeletes;
 

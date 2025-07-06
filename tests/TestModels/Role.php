@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Permission\Tests\TestModels;
+namespace Osen\Permission\Tests\TestModels;
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
-class Role extends \Spatie\Permission\Models\Role
+class Role extends \Osen\Permission\Models\Role
 {
     use SoftDeletes;
 

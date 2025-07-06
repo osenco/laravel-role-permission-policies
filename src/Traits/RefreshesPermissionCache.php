@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace Osen\Permission\Traits;
 
-use Spatie\Permission\PermissionRegistrar;
+use Osen\Permission\PermissionRegistrar;
 
 trait RefreshesPermissionCache
 {

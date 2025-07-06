@@ -27,7 +27,7 @@ Thus, a typical basic User model would have these basic minimum requirements:
 
 ```php
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Spatie\Permission\Traits\HasRoles;
+use Osen\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
@@ -75,7 +75,7 @@ There are 2 instances of this code snippet where you can explicitly set the leng
 
 ## Note for apps using UUIDs/ULIDs/GUIDs
 
-This package expects the primary key of your `User` model to be an auto-incrementing `int`. If it is not, you may need to modify the `create_permission_tables` migration and/or modify the default configuration. See [https://spatie.be/docs/laravel-permission/advanced-usage/uuid](https://spatie.be/docs/laravel-permission/advanced-usage/uuid) for more information. 
+This package expects the primary key of your `User` model to be an auto-incrementing `int`. If it is not, you may need to modify the `create_permission_tables` migration and/or modify the default configuration. See [https://osen.be/docs/laravel-permission/advanced-usage/uuid](https://osen.be/docs/laravel-permission/advanced-usage/uuid) for more information. 
 
 ## Database foreign-key relationship support
 

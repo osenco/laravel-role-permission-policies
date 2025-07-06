@@ -3,7 +3,7 @@
     "description": "Permission handling for Laravel 8.0 and up",
     "license": "MIT",
     "keywords": [
-        "spatie",
+        "osen",
         "laravel",
         "permission",
         "permissions",
@@ -15,8 +15,8 @@
     "authors": [
         {
             "name": "Freek Van der Herten",
-            "email": "freek@spatie.be",
-            "homepage": "https://spatie.be",
+            "email": "freek@osen.be",
+            "homepage": "https://osen.be",
             "role": "Developer"
         },
         {
@@ -45,7 +45,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Spatie\\Permission\\": "src"
+            "Osen\\Permission\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -53,7 +53,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Permission\\Tests\\": "tests"
+            "Osen\\Permission\\Tests\\": "tests"
         }
     },
     "config": {
@@ -66,8 +66,12 @@
         },
         "laravel": {
             "providers": [
-                "Spatie\\Permission\\PermissionServiceProvider"
-            ]
+                "Osen\\Permission\\PermissionServiceProvider",
+                "Osen\\Permission\\Filament\\FilamentRolesPermissionsServiceProvider"
+            ],
+            "aliases": {
+                "FilamentRolesPermissions": "Osen\\Permission\\Filament\\FilamentRolesPermissionsFacade"
+            }
         }
     },
     "scripts": {

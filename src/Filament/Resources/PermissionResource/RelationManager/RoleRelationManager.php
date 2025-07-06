@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Filament\Resources\PermissionResource\RelationManager;
+namespace Osen\Permission\Filament\Resources\PermissionResource\RelationManager;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -16,12 +16,12 @@ class RoleRelationManager extends RelationManager
 
     protected static function getModelLabel(): string
     {
-        return __('filament-roles-permissions-policies::filament-spatie.section.role');
+        return __('filament-roles-permissions-policies::filament-osen.section.role');
     }
 
     protected static function getPluralModelLabel(): string
     {
-        return __('filament-roles-permissions-policies::filament-spatie.section.roles');
+        return __('filament-roles-permissions-policies::filament-osen.section.roles');
     }
 
     public function form(Form $form): Form
@@ -29,9 +29,9 @@ class RoleRelationManager extends RelationManager
         return $form
             ->schema([
                 TextInput::make('name')
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name')),
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.name')),
                 TextInput::make('guard_name')
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.guard_name'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.guard_name'))
                     ->visible(fn () => config('filament-roles-permissions-policies.should_show_guard', true)),
 
             ]);
@@ -41,14 +41,14 @@ class RoleRelationManager extends RelationManager
     {
         return $table
             // Support changing table heading by translations.
-            ->heading(__('filament-roles-permissions-policies::filament-spatie.section.roles'))
+            ->heading(__('filament-roles-permissions-policies::filament-osen.section.roles'))
             ->columns([
                 TextColumn::make('name')
                     ->searchable()
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name')),
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.name')),
                 TextColumn::make('guard_name')
                     ->searchable()
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.guard_name'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.guard_name'))
                     ->visible(fn () => config('filament-roles-permissions-policies.should_show_guard', true)),
             ])
             ->filters([

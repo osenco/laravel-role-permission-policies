@@ -1,18 +1,18 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\Exceptions\GuardDoesNotMatch;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Spatie\Permission\Exceptions\RoleAlreadyExists;
-use Spatie\Permission\Exceptions\RoleDoesNotExist;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\Tests\TestModels\Admin;
-use Spatie\Permission\Tests\TestModels\RuntimeRole;
-use Spatie\Permission\Tests\TestModels\User;
+use Osen\Permission\Contracts\Role;
+use Osen\Permission\Exceptions\GuardDoesNotMatch;
+use Osen\Permission\Exceptions\PermissionDoesNotExist;
+use Osen\Permission\Exceptions\RoleAlreadyExists;
+use Osen\Permission\Exceptions\RoleDoesNotExist;
+use Osen\Permission\Models\Permission;
+use Osen\Permission\PermissionRegistrar;
+use Osen\Permission\Tests\TestModels\Admin;
+use Osen\Permission\Tests\TestModels\RuntimeRole;
+use Osen\Permission\Tests\TestModels\User;
 
 class RoleTest extends TestCase
 {

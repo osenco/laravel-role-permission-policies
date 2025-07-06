@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Tests\TestModels\Role;
+use Osen\Permission\Tests\TestModels\Role;
 
 class RoleWithNestingTest extends TestCase
 {

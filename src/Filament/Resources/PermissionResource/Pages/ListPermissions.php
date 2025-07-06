@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Filament\Resources\PermissionResource\Pages;
+namespace Osen\Permission\Filament\Resources\PermissionResource\Pages;
 
-use Spatie\Permission\Filament\Resources\PermissionResource;
+use Osen\Permission\Filament\Resources\PermissionResource;
 use Filament\Actions\CreateAction;
 use Filament\Forms\Components\Select;
 use Filament\Resources\Pages\ListRecords;
@@ -34,7 +34,7 @@ class ListPermissions extends ListRecords
                 })
                 ->form([
                     Select::make('role')
-                        ->label(__('filament-roles-permissions-policies::filament-spatie.field.role'))
+                        ->label(__('filament-roles-permissions-policies::filament-osen.field.role'))
                         ->options($roleModel::query()->pluck('name', 'id'))
                         ->required(),
                 ])->deselectRecordsAfterCompletion(),

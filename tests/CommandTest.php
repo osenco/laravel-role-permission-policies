@@ -1,13 +1,13 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use Composer\InstalledVersions;
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Support\Facades\Artisan;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
+use Osen\Permission\Models\Permission;
+use Osen\Permission\Models\Role;
 
 class CommandTest extends TestCase
 {
@@ -178,7 +178,7 @@ class CommandTest extends TestCase
     public function it_can_show_roles_by_teams()
     {
         config()->set('permission.teams', true);
-        app(\Spatie\Permission\PermissionRegistrar::class)->initializeCache();
+        app(\Osen\Permission\PermissionRegistrar::class)->initializeCache();
 
         Role::where('name', 'testRole2')->delete();
         Role::create(['name' => 'testRole_2']);
@@ -210,12 +210,12 @@ class CommandTest extends TestCase
             $this->markTestSkipped();
         }
 
-        app(\Spatie\Permission\PermissionRegistrar::class)->initializeCache();
+        app(\Osen\Permission\PermissionRegistrar::class)->initializeCache();
 
         Artisan::call('about');
         $output = str_replace("\r\n", "\n", Artisan::output());
 
-        $pattern = '/Spatie Permissions[ .\n]*Features Enabled[ .]*Default[ .\n]*Version/';
+        $pattern = '/Osen Permissions[ .\n]*Features Enabled[ .]*Default[ .\n]*Version/';
         if (method_exists($this, 'assertMatchesRegularExpression')) {
             $this->assertMatchesRegularExpression($pattern, $output);
         } else { // phpUnit 9/8
@@ -234,14 +234,14 @@ class CommandTest extends TestCase
             $this->markTestSkipped();
         }
 
-        app(\Spatie\Permission\PermissionRegistrar::class)->initializeCache();
+        app(\Osen\Permission\PermissionRegistrar::class)->initializeCache();
 
         config()->set('permission.teams', true);
 
         Artisan::call('about');
         $output = str_replace("\r\n", "\n", Artisan::output());
 
-        $pattern = '/Spatie Permissions[ .\n]*Features Enabled[ .]*Teams[ .\n]*Version/';
+        $pattern = '/Osen Permissions[ .\n]*Features Enabled[ .]*Teams[ .\n]*Version/';
         if (method_exists($this, 'assertMatchesRegularExpression')) {
             $this->assertMatchesRegularExpression($pattern, $output);
         } else { // phpUnit 9/8

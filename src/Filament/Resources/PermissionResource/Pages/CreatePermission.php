@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission\Filament\Resources\PermissionResource\Pages;
+namespace Osen\Permission\Filament\Resources\PermissionResource\Pages;
 
-use Spatie\Permission\Filament\Resources\PermissionResource;
-use Spatie\Permission\Filament\Resources\RoleResource;
+use Osen\Permission\Filament\Resources\PermissionResource;
+use Osen\Permission\Filament\Resources\RoleResource;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreatePermission extends CreateRecord

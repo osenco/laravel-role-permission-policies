@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Exceptions;
+namespace Osen\Permission\Exceptions;
 
 use Illuminate\Support\Collection;
 use InvalidArgumentException;

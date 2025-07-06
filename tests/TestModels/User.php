@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Tests\TestModels;
+namespace Osen\Permission\Tests\TestModels;
 
-use Spatie\Permission\Traits\HasRoles;
+use Osen\Permission\Traits\HasRoles;
 
 class User extends UserWithoutHasRoles
 {

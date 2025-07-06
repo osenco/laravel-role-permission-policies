@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Filament\Resources\RoleResource\RelationManager;
+namespace Osen\Permission\Filament\Resources\RoleResource\RelationManager;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -25,7 +25,7 @@ class UserRelationManager extends RelationManager
      */
     public static function getTitle(Model $ownerRecord, string $pageClass): string
     {
-        return __('filament-roles-permissions-policies::filament-spatie.section.users') ?? (string) str(static::getRelationshipName())
+        return __('filament-roles-permissions-policies::filament-osen.section.users') ?? (string) str(static::getRelationshipName())
             ->kebab()
             ->replace('-', ' ')
             ->headline();
@@ -33,12 +33,12 @@ class UserRelationManager extends RelationManager
 
     protected static function getModelLabel(): string
     {
-        return __('filament-roles-permissions-policies::filament-spatie.section.users');
+        return __('filament-roles-permissions-policies::filament-osen.section.users');
     }
 
     protected static function getPluralModelLabel(): string
     {
-        return __('filament-roles-permissions-policies::filament-spatie.section.users');
+        return __('filament-roles-permissions-policies::filament-osen.section.users');
     }
 
     public function form(Form $form): Form
@@ -46,7 +46,7 @@ class UserRelationManager extends RelationManager
         return $form
             ->schema([
                 TextInput::make(config('filament-roles-permissions-policies.user_name_column'))
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name')),
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.name')),
             ]);
     }
 
@@ -54,10 +54,10 @@ class UserRelationManager extends RelationManager
     {
         return $table
             // Support changing table heading by translations.
-            ->heading(__('filament-roles-permissions-policies::filament-spatie.section.users'))
+            ->heading(__('filament-roles-permissions-policies::filament-osen.section.users'))
             ->columns([
                 TextColumn::make(config('filament-roles-permissions-policies.user_name_column'))
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.name'))
                     ->searchable(config('filament-roles-permissions-policies.user_name_searchable_columns', 'name') ?? true),
             ])
             ->filters([

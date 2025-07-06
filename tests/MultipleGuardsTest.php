@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Tests\TestModels\Manager;
+use Osen\Permission\Contracts\Permission;
+use Osen\Permission\Tests\TestModels\Manager;
 
 class MultipleGuardsTest extends TestCase
 {

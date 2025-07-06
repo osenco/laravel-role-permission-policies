@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Permission\Filament\Resources;
+namespace Osen\Permission\Filament\Resources;
 
-use Spatie\Permission\Filament\Resources\PermissionResource\Pages\CreatePermission;
-use Spatie\Permission\Filament\Resources\PermissionResource\Pages\EditPermission;
-use Spatie\Permission\Filament\Resources\PermissionResource\Pages\ListPermissions;
-use Spatie\Permission\Filament\Resources\PermissionResource\Pages\ViewPermission;
-use Spatie\Permission\Filament\Resources\PermissionResource\RelationManager\RoleRelationManager;
+use Osen\Permission\Filament\Resources\PermissionResource\Pages\CreatePermission;
+use Osen\Permission\Filament\Resources\PermissionResource\Pages\EditPermission;
+use Osen\Permission\Filament\Resources\PermissionResource\Pages\ListPermissions;
+use Osen\Permission\Filament\Resources\PermissionResource\Pages\ViewPermission;
+use Osen\Permission\Filament\Resources\PermissionResource\RelationManager\RoleRelationManager;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
@@ -23,8 +23,8 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
+use Osen\Permission\Models\Permission;
+use Osen\Permission\Models\Role;
 
 class PermissionResource extends Resource
 {
@@ -50,12 +50,12 @@ class PermissionResource extends Resource
 
     public static function getLabel(): string
     {
-        return __('filament-roles-permissions-policies::filament-spatie.section.permission');
+        return __('filament-roles-permissions-policies::filament-osen.section.permission');
     }
 
     public static function getNavigationGroup(): ?string
     {
-        return __(config('filament-roles-permissions-policies.navigation_section_group', 'filament-roles-permissions-policies::filament-spatie.section.roles_and_permissions'));
+        return __(config('filament-roles-permissions-policies.navigation_section_group', 'filament-roles-permissions-policies::filament-osen.section.roles_and_permissions'));
     }
 
     public static function getNavigationSort(): ?int
@@ -65,7 +65,7 @@ class PermissionResource extends Resource
 
     public static function getPluralLabel(): string
     {
-        return __('filament-roles-permissions-policies::filament-spatie.section.permissions');
+        return __('filament-roles-permissions-policies::filament-osen.section.permissions');
     }
 
     public static function getCluster(): ?string
@@ -81,10 +81,10 @@ class PermissionResource extends Resource
                     ->schema([
                         Grid::make(2)->schema([
                             TextInput::make('name')
-                                ->label(__('filament-roles-permissions-policies::filament-spatie.field.name'))
+                                ->label(__('filament-roles-permissions-policies::filament-osen.field.name'))
                                 ->required(),
                             Select::make('guard_name')
-                                ->label(__('filament-roles-permissions-policies::filament-spatie.field.guard_name'))
+                                ->label(__('filament-roles-permissions-policies::filament-osen.field.guard_name'))
                                 ->options(config('filament-roles-permissions-policies.guard_names'))
                                 ->default(config('filament-roles-permissions-policies.default_guard_name'))
                                 ->visible(fn() => config('filament-roles-permissions-policies.should_show_guard', true))
@@ -93,7 +93,7 @@ class PermissionResource extends Resource
                                 ->required(),
                             Select::make('roles')
                                 ->multiple()
-                                ->label(__('filament-roles-permissions-policies::filament-spatie.field.roles'))
+                                ->label(__('filament-roles-permissions-policies::filament-osen.field.roles'))
                                 ->relationship(
                                     name: 'roles',
                                     titleAttribute: 'name',
@@ -121,20 +121,20 @@ class PermissionResource extends Resource
                     ->label('ID')
                     ->searchable(),
                 TextColumn::make('name')
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.name'))
                     ->searchable(),
                 TextColumn::make('guard_name')
                     ->toggleable(isToggledHiddenByDefault: config('filament-roles-permissions-policies.toggleable_guard_names.permissions.isToggledHiddenByDefault', true))
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.guard_name'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.guard_name'))
                     ->searchable()
                     ->visible(fn() => config('filament-roles-permissions-policies.should_show_guard', true)),
             ])
             ->filters([
                 SelectFilter::make('models')
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.models'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.models'))
                     ->multiple()
                     ->options(function () {
-                        $commands = new \Spatie\Permission\Filament\Commands\Permission();
+                        $commands = new \Osen\Permission\Filament\Commands\Permission();
 
                         /** @var \ReflectionClass[] */
                         $models = $commands->getAllModels();
@@ -161,7 +161,7 @@ class PermissionResource extends Resource
                         return $query;
                     }),
                 SelectFilter::make('guard_name')
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.guard_name'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.guard_name'))
                     ->multiple()
                     ->options(config('filament-roles-permissions-policies.guard_names')),
             ])->actions([
@@ -173,7 +173,7 @@ class PermissionResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
                 BulkAction::make('Attach to roles')
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.action.attach_to_roles'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.action.attach_to_roles'))
                     ->action(function (Collection $records, array $data): void {
                         Role::whereIn('id', $data['roles'])->each(function (Role $role) use ($records): void {
                             $records->each(fn(Permission $permission) => $role->givePermissionTo($permission));
@@ -182,7 +182,7 @@ class PermissionResource extends Resource
                     ->form([
                         Select::make('roles')
                             ->multiple()
-                            ->label(__('filament-roles-permissions-policies::filament-spatie.field.role'))
+                            ->label(__('filament-roles-permissions-policies::filament-osen.field.role'))
                             ->options(Role::query()->pluck('name', 'id'))
                             ->required(),
                     ])->deselectRecordsAfterCompletion(),

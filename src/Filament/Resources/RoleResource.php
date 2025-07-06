@@ -1,13 +1,13 @@
 <?php
 
-namespace Spatie\Permission\Filament\Resources;
+namespace Osen\Permission\Filament\Resources;
 
-use Spatie\Permission\Filament\Resources\RoleResource\Pages\CreateRole;
-use Spatie\Permission\Filament\Resources\RoleResource\Pages\EditRole;
-use Spatie\Permission\Filament\Resources\RoleResource\Pages\ListRoles;
-use Spatie\Permission\Filament\Resources\RoleResource\Pages\ViewRole;
-use Spatie\Permission\Filament\Resources\RoleResource\RelationManager\PermissionRelationManager;
-use Spatie\Permission\Filament\Resources\RoleResource\RelationManager\UserRelationManager;
+use Osen\Permission\Filament\Resources\RoleResource\Pages\CreateRole;
+use Osen\Permission\Filament\Resources\RoleResource\Pages\EditRole;
+use Osen\Permission\Filament\Resources\RoleResource\Pages\ListRoles;
+use Osen\Permission\Filament\Resources\RoleResource\Pages\ViewRole;
+use Osen\Permission\Filament\Resources\RoleResource\RelationManager\PermissionRelationManager;
+use Osen\Permission\Filament\Resources\RoleResource\RelationManager\UserRelationManager;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
@@ -19,7 +19,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Validation\Rules\Unique;
-use Spatie\Permission\Models\Role;
+use Osen\Permission\Models\Role;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
@@ -49,12 +49,12 @@ class RoleResource extends Resource
 
     public static function getLabel(): string
     {
-        return __('filament-roles-permissions-policies::filament-spatie.section.role');
+        return __('filament-roles-permissions-policies::filament-osen.section.role');
     }
 
     public static function getNavigationGroup(): ?string
     {
-        return __(config('filament-roles-permissions-policies.navigation_section_group', 'filament-roles-permissions-policies::filament-spatie.section.roles_and_permissions'));
+        return __(config('filament-roles-permissions-policies.navigation_section_group', 'filament-roles-permissions-policies::filament-osen.section.roles_and_permissions'));
     }
 
     public static function getNavigationSort(): ?int
@@ -64,7 +64,7 @@ class RoleResource extends Resource
 
     public static function getPluralLabel(): string
     {
-        return __('filament-roles-permissions-policies::filament-spatie.section.roles');
+        return __('filament-roles-permissions-policies::filament-osen.section.roles');
     }
 
     public static function getCluster(): ?string
@@ -81,7 +81,7 @@ class RoleResource extends Resource
                         Grid::make(2)
                             ->schema([
                                 TextInput::make('name')
-                                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name'))
+                                    ->label(__('filament-roles-permissions-policies::filament-osen.field.name'))
                                     ->required()
                                     ->unique(ignoreRecord: true, modifyRuleUsing: function (Unique $rule) {
                                         // If using teams and Tenancy, ensure uniqueness against current tenant
@@ -93,7 +93,7 @@ class RoleResource extends Resource
                                     }),
 
                                 Select::make('guard_name')
-                                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.guard_name'))
+                                    ->label(__('filament-roles-permissions-policies::filament-osen.field.guard_name'))
                                     ->options(config('filament-roles-permissions-policies.guard_names'))
                                     ->default(config('filament-roles-permissions-policies.default_guard_name'))
                                     ->visible(fn() => config('filament-roles-permissions-policies.should_show_guard', true))
@@ -102,7 +102,7 @@ class RoleResource extends Resource
                                 Select::make('permissions')
                                     ->columnSpanFull()
                                     ->multiple()
-                                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.permissions'))
+                                    ->label(__('filament-roles-permissions-policies::filament-osen.field.permissions'))
                                     ->relationship(
                                         name: 'permissions',
                                         modifyQueryUsing: fn(Builder $query) => $query->orderBy('name'),
@@ -113,14 +113,14 @@ class RoleResource extends Resource
                                     ->preload(config('filament-roles-permissions-policies.preload_permissions')),
 
                                 Select::make(config('permission.column_names.team_foreign_key', 'team_id'))
-                                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.team'))
+                                    ->label(__('filament-roles-permissions-policies::filament-osen.field.team'))
                                     ->hidden(fn() => ! config('permission.teams', false) || Filament::hasTenancy())
                                     ->options(
                                         fn() => config('filament-roles-permissions-policies.team_model', App\Models\Team::class)::pluck('name', 'id')
                                     )
                                     ->dehydrated(fn($state) => (int) $state > 0)
-                                    ->placeholder(__('filament-roles-permissions-policies::filament-spatie.select-team'))
-                                    ->hint(__('filament-roles-permissions-policies::filament-spatie.select-team-hint')),
+                                    ->placeholder(__('filament-roles-permissions-policies::filament-osen.select-team'))
+                                    ->hint(__('filament-roles-permissions-policies::filament-osen.select-team-hint')),
                             ]),
                     ]),
             ]);
@@ -134,15 +134,15 @@ class RoleResource extends Resource
                     ->label('ID')
                     ->searchable(),
                 TextColumn::make('name')
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.name'))
                     ->searchable(),
                 TextColumn::make('permissions_count')
                     ->counts('permissions')
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.permissions_count'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.permissions_count'))
                     ->toggleable(isToggledHiddenByDefault: config('filament-roles-permissions-policies.toggleable_guard_names.roles.isToggledHiddenByDefault', true)),
                 TextColumn::make('guard_name')
                     ->toggleable(isToggledHiddenByDefault: config('filament-roles-permissions-policies.toggleable_guard_names.roles.isToggledHiddenByDefault', true))
-                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.guard_name'))
+                    ->label(__('filament-roles-permissions-policies::filament-osen.field.guard_name'))
                     ->searchable(),
             ])
             ->filters([])

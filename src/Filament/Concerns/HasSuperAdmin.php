@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Filament\Concerns;
+namespace Osen\Permission\Filament\Concerns;
 
-use Spatie\Permission\Traits\HasRoles;
+use Osen\Permission\Traits\HasRoles;
 
 trait HasSuperAdmin
 {

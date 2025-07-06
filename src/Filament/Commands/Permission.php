@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Filament\Commands;
+namespace Osen\Permission\Filament\Commands;
 
 use ReflectionClass;
 use ReflectionException;

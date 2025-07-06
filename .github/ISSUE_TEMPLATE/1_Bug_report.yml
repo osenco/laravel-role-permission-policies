@@ -4,8 +4,8 @@ body:
   - type: markdown
     attributes:
       value: |
-          Before creating a new Bug Report, please check that there isn't already a similar issue on [the issue tracker](https://github.com/spatie/laravel-permission/issues) or in [the discussions](https://github.com/spatie/laravel-permission/discussions).
-          Also, **many issues/questions/problems are already answered** in the [documentation](https://spatie.be/docs/laravel-permission) already. **Please be sure to check the docs** because it will save you time!
+          Before creating a new Bug Report, please check that there isn't already a similar issue on [the issue tracker](https://github.com/osenco/laravel-permission/issues) or in [the discussions](https://github.com/osenco/laravel-permission/discussions).
+          Also, **many issues/questions/problems are already answered** in the [documentation](https://osen.be/docs/laravel-permission) already. **Please be sure to check the docs** because it will save you time!
 
   - type: textarea
     attributes:
@@ -34,7 +34,7 @@ body:
           You can use `composer show` to get package version numbers:
   - type: input
     attributes:
-      label: "Version of spatie/laravel-permission package:"
+      label: "Version of osen/laravel-permission package:"
     validations:
       required: true
   - type: input

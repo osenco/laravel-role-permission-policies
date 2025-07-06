@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use Illuminate\Contracts\Auth\Access\Gate;
 use PHPUnit\Framework\Attributes\RequiresPhp;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Contracts\Permission;
+use Osen\Permission\Contracts\Permission;
 
 class GateTest extends TestCase
 {

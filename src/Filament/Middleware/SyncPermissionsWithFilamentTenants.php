@@ -1,13 +1,13 @@
 <?php
 
-namespace Spatie\Permission\Filament\Middleware;
+namespace Osen\Permission\Filament\Middleware;
 
 use Closure;
 use Filament\Facades\Filament;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class SyncSpatiePermissionsWithFilamentTenants
+class SyncPermissionsWithFilamentTenants
 {
     /**
      * Handle an incoming request.
@@ -17,8 +17,8 @@ class SyncSpatiePermissionsWithFilamentTenants
     public function handle(Request $request, Closure $next): Response
     {
         $filament = Filament::getTenant()->id;
-        $spatie = getPermissionsTeamId();
-        if ($filament !== $spatie) {
+        $osen = getPermissionsTeamId();
+        if ($filament !== $osen) {
             setPermissionsTeamId($filament);
         }
 

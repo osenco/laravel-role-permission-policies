@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Filament;
+namespace Osen\Permission\Filament;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -38,15 +38,15 @@ sed -i '' 's/DB_DATABASE=/#DB_DATABASE=/' .env
 touch database/database.sqlite
 
 # Package
-composer require spatie/laravel-permission
-php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+composer require osen/laravel-permission
+php artisan vendor:publish --provider="Osen\Permission\PermissionServiceProvider"
 git add .
-git commit -m "Add Spatie Laravel Permissions package"
+git commit -m "Add Osen Laravel Permissions package"
 php artisan migrate:fresh
 
 # Add `HasRoles` trait to User model
-sed -i '' $'s/use HasFactory, Notifiable;/use HasFactory, Notifiable;\\\n    use \\\\Spatie\\\\Permission\\\\Traits\\\\HasRoles;/' app/Models/User.php
-sed -i '' $'s/use HasApiTokens, HasFactory, Notifiable;/use HasApiTokens, HasFactory, Notifiable;\\\n    use \\\\Spatie\\\\Permission\\\\Traits\\\\HasRoles;/' app/Models/User.php
+sed -i '' $'s/use HasFactory, Notifiable;/use HasFactory, Notifiable;\\\n    use \\\\Osen\\\\Permission\\\\Traits\\\\HasRoles;/' app/Models/User.php
+sed -i '' $'s/use HasApiTokens, HasFactory, Notifiable;/use HasApiTokens, HasFactory, Notifiable;\\\n    use \\\\Osen\\\\Permission\\\\Traits\\\\HasRoles;/' app/Models/User.php
 git add . && git commit -m "Add HasRoles trait"
 ```
 
@@ -68,9 +68,9 @@ git add . && git commit -m "Setup auth scaffold"
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\PermissionRegistrar;
+use Osen\Permission\Models\Permission;
+use Osen\Permission\Models\Role;
+use Osen\Permission\PermissionRegistrar;
 
 class PermissionsDemoSeeder extends Seeder
 {
@@ -155,7 +155,7 @@ The permissions created in the seeder above imply that there will be some sort o
 
 Your app will have Models, Controllers, routes, Views, Factories, Policies, Tests, middleware, and maybe additional Seeders.
 
-You can see examples of these in the demo app at https://github.com/drbyte/spatie-permissions-demo/
+You can see examples of these in the demo app at https://github.com/drbyte/osen-permissions-demo/
 
 
 ### Quick Examples

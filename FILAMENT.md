@@ -21,14 +21,14 @@ php artisan vendor:publish --tag="filament-roles-permissions-policies-config" --
 
 ## Installation
 
-Since the package depends on [Spatie's Permission](https://spatie.be/docs/laravel-permission/v5/introduction) package. You have to publish the migrations by running:
+Since the package depends on [Osen's Permission](https://osen.be/docs/laravel-permission/v5/introduction) package. You have to publish the migrations by running:
 ```bash
-php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+php artisan vendor:publish --provider="Osen\Permission\PermissionServiceProvider"
 ```
 
 Add the plugin to the `AdminPanelProvider`
 ```php
-use Spatie\Permission\Filament\FilamentRolesPermissionsPlugin;
+use Osen\Permission\Filament\FilamentRolesPermissionsPlugin;
 
 $panel
     ...
@@ -36,7 +36,7 @@ $panel
 
 ```
 
-Now you should add any other configurations needed for the Spatie-Permission package.
+Now you should add any other configurations needed for the Osen-Permission package.
 
 **Note:** This will override your existing config file.
 You can publish the config file of the package with:
@@ -127,8 +127,8 @@ Make sure to add them to the AuthServiceProvider.
 ```bash
 use App\Policies\RolePolicy;
 use App\Policies\PermissionPolicy;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
+use Osen\Permission\Models\Role;
+use Osen\Permission\Models\Permission;
 
 Gate::policy(Role::class, RolePolicy::class);
 Gate::policy(Permission::class, PermissionPolicy::class);
@@ -149,7 +149,7 @@ php artisan permissions:sync -COPY
 * Add the following trait to the User Model
 
 ```php
-use Spatie\Permission\Filament\Concerns\HasSuperAdmin;
+use Osen\Permission\Filament\Concerns\HasSuperAdmin;
 
 class User extends Authenticatable{
 
@@ -190,7 +190,7 @@ Example: If you use `api` guard, you should add the following to the `guards` ar
 ```
 
 - Make sure the `team_model` on the `config/permission` is correctly set.
-- Create a Role model which extends `Spatie\Permission\Models\Role`
+- Create a Role model which extends `Osen\Permission\Models\Role`
 - Replace the model in the `config/permission.php` with the newly created models
 - Add the `team` relationship in both models
 
@@ -205,12 +205,12 @@ public function team(): BelongsTo
 
 
 ```php
-use Spatie\Permission\Filament\Middleware\SyncSpatiePermissionsWithFilamentTenants;
+use Osen\Permission\Filament\Middleware\SyncPermissionsWithFilamentTenants;
 
 $panel
     ...
     ->tenantMiddleware([
-        SyncSpatiePermissionsWithFilamentTenants::class,
+        SyncPermissionsWithFilamentTenants::class,
     ], isPersistent: true)
 ```
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Filament\Resources\RoleResource\Pages;
+namespace Osen\Permission\Filament\Resources\RoleResource\Pages;
 
-use Spatie\Permission\Filament\Resources\RoleResource;
+use Osen\Permission\Filament\Resources\RoleResource;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateRole extends CreateRecord

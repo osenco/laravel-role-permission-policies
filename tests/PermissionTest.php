@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Exceptions\PermissionAlreadyExists;
-use Spatie\Permission\Tests\TestModels\User;
+use Osen\Permission\Contracts\Permission;
+use Osen\Permission\Exceptions\PermissionAlreadyExists;
+use Osen\Permission\Tests\TestModels\User;
 
 class PermissionTest extends TestCase
 {

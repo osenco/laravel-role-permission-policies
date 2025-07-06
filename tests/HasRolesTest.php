@@ -1,22 +1,22 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use PHPUnit\Framework\Attributes\RequiresPhp;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\Events\RoleAttached;
-use Spatie\Permission\Events\RoleDetached;
-use Spatie\Permission\Exceptions\GuardDoesNotMatch;
-use Spatie\Permission\Exceptions\RoleDoesNotExist;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\Tests\TestModels\Admin;
-use Spatie\Permission\Tests\TestModels\SoftDeletingUser;
-use Spatie\Permission\Tests\TestModels\User;
+use Osen\Permission\Contracts\Permission;
+use Osen\Permission\Contracts\Role;
+use Osen\Permission\Events\RoleAttached;
+use Osen\Permission\Events\RoleDetached;
+use Osen\Permission\Exceptions\GuardDoesNotMatch;
+use Osen\Permission\Exceptions\RoleDoesNotExist;
+use Osen\Permission\PermissionRegistrar;
+use Osen\Permission\Tests\TestModels\Admin;
+use Osen\Permission\Tests\TestModels\SoftDeletingUser;
+use Osen\Permission\Tests\TestModels\User;
 
 class HasRolesTest extends TestCase
 {

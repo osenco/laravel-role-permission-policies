@@ -1,8 +1,8 @@
 <div align="left">
-    <a href="https://spatie.be/open-source?utm_source=github&utm_medium=banner&utm_campaign=laravel-permission">
+    <a href="https://osen.be/open-source?utm_source=github&utm_medium=banner&utm_campaign=laravel-permission">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://spatie.be/packages/header/laravel-permission/html/dark.webp">
-        <img alt="Logo for laravel-permission" src="https://spatie.be/packages/header/laravel-permission/html/light.webp">
+        <source media="(prefers-color-scheme: dark)" srcset="https://osen.be/packages/header/laravel-permission/html/dark.webp">
+        <img alt="Logo for laravel-permission" src="https://osen.be/packages/header/laravel-permission/html/light.webp">
       </picture>
     </a>
 
@@ -12,7 +12,7 @@
 
 ## Documentation, Installation, and Usage Instructions
 
-See the [documentation](https://spatie.be/docs/laravel-permission/) for detailed installation and usage instructions.
+See the [documentation](https://osen.be/docs/laravel-permission/) for detailed installation and usage instructions.
 
 ## What It Does
 This package allows you to manage user permissions and roles in a database.
@@ -38,7 +38,7 @@ $user->can('edit articles');
 ## Installation
 
 ```bash
-composer osenco/require osenco/laravel-role-permission-policies
+composer require osenco/laravel-role-permission-policies
 ```
 
 ## Filament
@@ -51,7 +51,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/osenco/.github/blob/main/CONTRIBUTING.md) for details.
 
 ### Testing
 
@@ -61,15 +61,15 @@ composer test
 
 ### Security
 
-If you discover any security-related issues, please email [security@spatie.be](mailto:security@spatie.be) instead of using the issue tracker.
+If you discover any security-related issues, please email [security@osen.be](mailto:security@osen.be) instead of using the issue tracker.
 
 ## Postcardware
 
 You're free to use this package, but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
 
-Our address is: Spatie, Kruikstraat 22, 2018 Antwerp, Belgium.
+Our address is: Osen, Kruikstraat 22, 2018 Antwerp, Belgium.
 
-We publish all received postcards [on our company website](https://spatie.be/en/opensource/postcards).
+We publish all received postcards [on our company website](https://osen.be/en/opensource/postcards).
 
 ## Credits
 

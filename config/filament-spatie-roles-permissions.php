@@ -3,15 +3,15 @@
 return [
 
     'resources' => [
-        'PermissionResource' => \Spatie\Permission\Filament\Resources\PermissionResource::class,
-        'RoleResource' => \Spatie\Permission\Filament\Resources\RoleResource::class,
+        'PermissionResource' => \Osen\Permission\Filament\Resources\PermissionResource::class,
+        'RoleResource' => \Osen\Permission\Filament\Resources\RoleResource::class,
     ],
 
     'preload_roles' => true,
 
     'preload_permissions' => true,
 
-    'navigation_section_group' => 'filament-roles-permissions-policies::filament-spatie.section.roles_and_permissions', // Default uses language constant
+    'navigation_section_group' => 'filament-roles-permissions-policies::filament-osen.section.roles_and_permissions', // Default uses language constant
 
     'team_model' => \App\Models\Team::class,
 

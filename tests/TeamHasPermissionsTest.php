@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Tests\TestModels\User;
+use Osen\Permission\Tests\TestModels\User;
 
 class TeamHasPermissionsTest extends HasPermissionsTest
 {

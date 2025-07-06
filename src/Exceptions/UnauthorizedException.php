@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Exceptions;
+namespace Osen\Permission\Exceptions;
 
 use Illuminate\Contracts\Auth\Access\Authorizable;
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -57,7 +57,7 @@ class UnauthorizedException extends HttpException
     {
         $class = get_class($user);
 
-        return new static(403, __('Authorizable class `:class` must use Spatie\\Permission\\Traits\\HasRoles trait.', [
+        return new static(403, __('Authorizable class `:class` must use Osen\\Permission\\Traits\\HasRoles trait.', [
             'class' => $class,
         ]), null, []);
     }

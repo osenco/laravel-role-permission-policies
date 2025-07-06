@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\Tests\TestModels\User;
+use Osen\Permission\Contracts\Role;
+use Osen\Permission\Tests\TestModels\User;
 
 class TeamHasRolesTest extends HasRolesTest
 {

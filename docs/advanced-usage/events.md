@@ -12,10 +12,10 @@ However, you may enable events by setting the `events_enabled => true` in `confi
 The following events are available since `v6.15.0`:
 
 ```
-\Spatie\Permission\Events\RoleAttached::class
-\Spatie\Permission\Events\RoleDetached::class
-\Spatie\Permission\Events\PermissionAttached::class
-\Spatie\Permission\Events\PermissionDetached::class
+\Osen\Permission\Events\RoleAttached::class
+\Osen\Permission\Events\RoleDetached::class
+\Osen\Permission\Events\PermissionAttached::class
+\Osen\Permission\Events\PermissionDetached::class
 ```
 Note that the events can receive the role or permission details as a model ID or as an Eloquent record, or as an array or collection of ids or records. Be sure to inspect the parameter before acting on it.
 

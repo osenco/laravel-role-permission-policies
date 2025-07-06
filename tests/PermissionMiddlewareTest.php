@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Gate;
 use InvalidArgumentException;
 use Laravel\Passport\Passport;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Exceptions\UnauthorizedException;
-use Spatie\Permission\Middleware\PermissionMiddleware;
-use Spatie\Permission\Tests\TestModels\UserWithoutHasRoles;
+use Osen\Permission\Contracts\Permission;
+use Osen\Permission\Exceptions\UnauthorizedException;
+use Osen\Permission\Middleware\PermissionMiddleware;
+use Osen\Permission\Tests\TestModels\UserWithoutHasRoles;
 
 class PermissionMiddlewareTest extends TestCase
 {
@@ -422,15 +422,15 @@ class PermissionMiddlewareTest extends TestCase
     public function the_middleware_can_be_created_with_static_using_method()
     {
         $this->assertSame(
-            'Spatie\Permission\Middleware\PermissionMiddleware:edit-articles',
+            'Osen\Permission\Middleware\PermissionMiddleware:edit-articles',
             PermissionMiddleware::using('edit-articles')
         );
         $this->assertEquals(
-            'Spatie\Permission\Middleware\PermissionMiddleware:edit-articles,my-guard',
+            'Osen\Permission\Middleware\PermissionMiddleware:edit-articles,my-guard',
             PermissionMiddleware::using('edit-articles', 'my-guard')
         );
         $this->assertEquals(
-            'Spatie\Permission\Middleware\PermissionMiddleware:edit-articles|edit-news',
+            'Osen\Permission\Middleware\PermissionMiddleware:edit-articles|edit-news',
             PermissionMiddleware::using(['edit-articles', 'edit-news'])
         );
     }
@@ -445,15 +445,15 @@ class PermissionMiddlewareTest extends TestCase
     public function the_middleware_can_handle_enum_based_permissions_with_static_using_method()
     {
         $this->assertSame(
-            'Spatie\Permission\Middleware\PermissionMiddleware:view articles',
+            'Osen\Permission\Middleware\PermissionMiddleware:view articles',
             PermissionMiddleware::using(TestModels\TestRolePermissionsEnum::VIEWARTICLES)
         );
         $this->assertEquals(
-            'Spatie\Permission\Middleware\PermissionMiddleware:view articles,my-guard',
+            'Osen\Permission\Middleware\PermissionMiddleware:view articles,my-guard',
             PermissionMiddleware::using(TestModels\TestRolePermissionsEnum::VIEWARTICLES, 'my-guard')
         );
         $this->assertEquals(
-            'Spatie\Permission\Middleware\PermissionMiddleware:view articles|edit articles',
+            'Osen\Permission\Middleware\PermissionMiddleware:view articles|edit articles',
             PermissionMiddleware::using([TestModels\TestRolePermissionsEnum::VIEWARTICLES, TestModels\TestRolePermissionsEnum::EDITARTICLES])
         );
     }

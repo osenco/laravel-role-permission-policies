@@ -1,20 +1,20 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Event;
 use PHPUnit\Framework\Attributes\RequiresPhp;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\Events\PermissionAttached;
-use Spatie\Permission\Events\PermissionDetached;
-use Spatie\Permission\Exceptions\GuardDoesNotMatch;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Spatie\Permission\Tests\TestModels\SoftDeletingUser;
-use Spatie\Permission\Tests\TestModels\User;
+use Osen\Permission\Contracts\Permission;
+use Osen\Permission\Contracts\Role;
+use Osen\Permission\Events\PermissionAttached;
+use Osen\Permission\Events\PermissionDetached;
+use Osen\Permission\Exceptions\GuardDoesNotMatch;
+use Osen\Permission\Exceptions\PermissionDoesNotExist;
+use Osen\Permission\Tests\TestModels\SoftDeletingUser;
+use Osen\Permission\Tests\TestModels\User;
 
 class HasPermissionsTest extends TestCase
 {

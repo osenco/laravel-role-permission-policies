@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission;
+namespace Osen\Permission;
 
 use Illuminate\Cache\CacheManager;
 use Illuminate\Contracts\Auth\Access\Authorizable;
@@ -9,9 +9,9 @@ use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\PermissionsTeamResolver;
-use Spatie\Permission\Contracts\Role;
+use Osen\Permission\Contracts\Permission;
+use Osen\Permission\Contracts\PermissionsTeamResolver;
+use Osen\Permission\Contracts\Role;
 
 class PermissionRegistrar
 {

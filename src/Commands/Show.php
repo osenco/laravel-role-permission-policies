@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Commands;
+namespace Osen\Permission\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
-use Spatie\Permission\Contracts\Permission as PermissionContract;
-use Spatie\Permission\Contracts\Role as RoleContract;
+use Osen\Permission\Contracts\Permission as PermissionContract;
+use Osen\Permission\Contracts\Role as RoleContract;
 use Symfony\Component\Console\Helper\TableCell;
 
 class Show extends Command

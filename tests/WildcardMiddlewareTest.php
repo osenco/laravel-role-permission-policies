@@ -1,16 +1,16 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Exceptions\UnauthorizedException;
-use Spatie\Permission\Middleware\PermissionMiddleware;
-use Spatie\Permission\Middleware\RoleMiddleware;
-use Spatie\Permission\Middleware\RoleOrPermissionMiddleware;
-use Spatie\Permission\Models\Permission;
+use Osen\Permission\Exceptions\UnauthorizedException;
+use Osen\Permission\Middleware\PermissionMiddleware;
+use Osen\Permission\Middleware\RoleMiddleware;
+use Osen\Permission\Middleware\RoleOrPermissionMiddleware;
+use Osen\Permission\Models\Permission;
 
 class WildcardMiddlewareTest extends TestCase
 {

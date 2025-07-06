@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use PHPUnit\Framework\Attributes\RequiresPhp;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Tests\TestModels\TestRolePermissionsEnum;
+use Osen\Permission\Tests\TestModels\TestRolePermissionsEnum;
 
 class RouteTest extends TestCase
 {

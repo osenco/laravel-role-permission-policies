@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Models\Permission;
+use Osen\Permission\Models\Permission;
 
 class WildcardRoleTest extends TestCase
 {

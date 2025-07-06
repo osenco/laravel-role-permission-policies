@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Filament;
+namespace Osen\Permission\Filament;
 
-use Spatie\Permission\Filament\Commands\Permission;
+use Osen\Permission\Filament\Commands\Permission;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

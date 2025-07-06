@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Middleware;
+namespace Osen\Permission\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use Spatie\Permission\Exceptions\UnauthorizedException;
-use Spatie\Permission\Guard;
+use Osen\Permission\Exceptions\UnauthorizedException;
+use Osen\Permission\Guard;
 
 class RoleMiddleware
 {

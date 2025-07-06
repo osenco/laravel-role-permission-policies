@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Config;
 use InvalidArgumentException;
 use Laravel\Passport\Passport;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\Exceptions\UnauthorizedException;
-use Spatie\Permission\Middleware\RoleMiddleware;
-use Spatie\Permission\Tests\TestModels\UserWithoutHasRoles;
+use Osen\Permission\Contracts\Role;
+use Osen\Permission\Exceptions\UnauthorizedException;
+use Osen\Permission\Middleware\RoleMiddleware;
+use Osen\Permission\Tests\TestModels\UserWithoutHasRoles;
 
 class RoleMiddlewareTest extends TestCase
 {
@@ -355,15 +355,15 @@ class RoleMiddlewareTest extends TestCase
     public function the_middleware_can_be_created_with_static_using_method()
     {
         $this->assertSame(
-            'Spatie\Permission\Middleware\RoleMiddleware:testAdminRole',
+            'Osen\Permission\Middleware\RoleMiddleware:testAdminRole',
             RoleMiddleware::using('testAdminRole')
         );
         $this->assertEquals(
-            'Spatie\Permission\Middleware\RoleMiddleware:testAdminRole,my-guard',
+            'Osen\Permission\Middleware\RoleMiddleware:testAdminRole,my-guard',
             RoleMiddleware::using('testAdminRole', 'my-guard')
         );
         $this->assertEquals(
-            'Spatie\Permission\Middleware\RoleMiddleware:testAdminRole|anotherRole',
+            'Osen\Permission\Middleware\RoleMiddleware:testAdminRole|anotherRole',
             RoleMiddleware::using(['testAdminRole', 'anotherRole'])
         );
     }
@@ -378,15 +378,15 @@ class RoleMiddlewareTest extends TestCase
     public function the_middleware_can_handle_enum_based_roles_with_static_using_method()
     {
         $this->assertSame(
-            'Spatie\Permission\Middleware\RoleMiddleware:writer',
+            'Osen\Permission\Middleware\RoleMiddleware:writer',
             RoleMiddleware::using(TestModels\TestRolePermissionsEnum::WRITER)
         );
         $this->assertEquals(
-            'Spatie\Permission\Middleware\RoleMiddleware:writer,my-guard',
+            'Osen\Permission\Middleware\RoleMiddleware:writer,my-guard',
             RoleMiddleware::using(TestModels\TestRolePermissionsEnum::WRITER, 'my-guard')
         );
         $this->assertEquals(
-            'Spatie\Permission\Middleware\RoleMiddleware:writer|editor',
+            'Osen\Permission\Middleware\RoleMiddleware:writer|editor',
             RoleMiddleware::using([TestModels\TestRolePermissionsEnum::WRITER, TestModels\TestRolePermissionsEnum::EDITOR])
         );
     }

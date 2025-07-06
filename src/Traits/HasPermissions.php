@@ -1,23 +1,23 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace Osen\Permission\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\Contracts\Wildcard;
-use Spatie\Permission\Events\PermissionAttached;
-use Spatie\Permission\Events\PermissionDetached;
-use Spatie\Permission\Exceptions\GuardDoesNotMatch;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Spatie\Permission\Exceptions\WildcardPermissionInvalidArgument;
-use Spatie\Permission\Exceptions\WildcardPermissionNotImplementsContract;
-use Spatie\Permission\Guard;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\WildcardPermission;
+use Osen\Permission\Contracts\Permission;
+use Osen\Permission\Contracts\Role;
+use Osen\Permission\Contracts\Wildcard;
+use Osen\Permission\Events\PermissionAttached;
+use Osen\Permission\Events\PermissionDetached;
+use Osen\Permission\Exceptions\GuardDoesNotMatch;
+use Osen\Permission\Exceptions\PermissionDoesNotExist;
+use Osen\Permission\Exceptions\WildcardPermissionInvalidArgument;
+use Osen\Permission\Exceptions\WildcardPermissionNotImplementsContract;
+use Osen\Permission\Guard;
+use Osen\Permission\PermissionRegistrar;
+use Osen\Permission\WildcardPermission;
 
 trait HasPermissions
 {

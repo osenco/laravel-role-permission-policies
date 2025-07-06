@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission;
+namespace Osen\Permission;
 
-use Spatie\Permission\Contracts\PermissionsTeamResolver;
+use Osen\Permission\Contracts\PermissionsTeamResolver;
 
 class DefaultTeamResolver implements PermissionsTeamResolver
 {

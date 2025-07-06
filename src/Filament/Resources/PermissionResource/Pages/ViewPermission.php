@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Filament\Resources\PermissionResource\Pages;
+namespace Osen\Permission\Filament\Resources\PermissionResource\Pages;
 
-use Spatie\Permission\Filament\Resources\PermissionResource;
+use Osen\Permission\Filament\Resources\PermissionResource;
 use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
 

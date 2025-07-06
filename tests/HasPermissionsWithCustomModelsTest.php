@@ -1,14 +1,14 @@
 <?php
 
-namespace Spatie\Permission\Tests;
+namespace Osen\Permission\Tests;
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use PHPUnit\Framework\Attributes\Test;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\Tests\TestModels\Admin;
-use Spatie\Permission\Tests\TestModels\Permission;
-use Spatie\Permission\Tests\TestModels\User;
+use Osen\Permission\PermissionRegistrar;
+use Osen\Permission\Tests\TestModels\Admin;
+use Osen\Permission\Tests\TestModels\Permission;
+use Osen\Permission\Tests\TestModels\User;
 
 class HasPermissionsWithCustomModelsTest extends HasPermissionsTest
 {
