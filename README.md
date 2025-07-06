@@ -6,13 +6,13 @@
       </picture>
     </a>
 
-<h1>Associate users with permissions and roles</h1>
+<h1>Associate users with permissions, roles and policies</h1>
     
 </div>
 
 ## Documentation, Installation, and Usage Instructions
 
-See the [documentation](https://osen.be/docs/laravel-permission/) for detailed installation and usage instructions.
+See the [documentation](https://osenco.github.io/laravel-role-permission-policies/) for detailed installation and usage instructions.
 
 ## What It Does
 This package allows you to manage user permissions and roles in a database.
@@ -57,34 +57,11 @@ composer test
 
 If you discover any security-related issues, please email [security@osen.be](mailto:security@osen.be) instead of using the issue tracker.
 
-## Postcardware
-
-You're free to use this package, but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
-
-Our address is: Osen, Kruikstraat 22, 2018 Antwerp, Belgium.
-
-We publish all received postcards [on our company website](https://osen.be/en/opensource/postcards).
-
 ## Credits
 
 - [Chris Brown](https://github.com/drbyte)
 - [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contributors](../../contributors)
-
-This package is heavily based on [Jeffrey Way](https://twitter.com/jeffrey_way)'s awesome [Laracasts](https://laracasts.com) lessons
-on [permissions and roles](https://laracasts.com/series/whats-new-in-laravel-5-1/episodes/16). His original code
-can be found [in this repo on GitHub](https://github.com/laracasts/laravel-5-roles-and-permissions-demo).
-
-Special thanks to [Alex Vanderbist](https://github.com/AlexVanderbist) who greatly helped with `v2`, and to [Chris Brown](https://github.com/drbyte) for his longtime support  helping us maintain the package.
-
-Special thanks to [Caneco](https://twitter.com/caneco) for the original logo.
-
-## Alternatives
-
-- [Povilas Korop](https://twitter.com/@povilaskorop) did an excellent job listing the alternatives [in an article on Laravel News](https://laravel-news.com/two-best-roles-permissions-packages). In that same article, he compares laravel-permission to [Joseph Silber](https://github.com/JosephSilber)'s [Bouncer]((https://github.com/JosephSilber/bouncer)), which in our book is also an excellent package.
-- [santigarcor/laratrust](https://github.com/santigarcor/laratrust) implements team support
-- [ultraware/roles](https://github.com/ultraware/roles) (archived) takes a slightly different approach to its features.
-- [zizaco/entrust](https://github.com/zizaco/entrust) offers some wildcard pattern matching
 
 ## License
 
