@@ -17,7 +17,7 @@ class UserRelationManager extends RelationManager
 
     public static function getRecordTitleAttribute(): ?string
     {
-        return config('filament-spatie-roles-permissions.user_name_column');
+        return config('filament-roles-permissions-policies.user_name_column');
     }
 
     /*
@@ -25,7 +25,7 @@ class UserRelationManager extends RelationManager
      */
     public static function getTitle(Model $ownerRecord, string $pageClass): string
     {
-        return __('filament-spatie-roles-permissions::filament-spatie.section.users') ?? (string) str(static::getRelationshipName())
+        return __('filament-roles-permissions-policies::filament-spatie.section.users') ?? (string) str(static::getRelationshipName())
             ->kebab()
             ->replace('-', ' ')
             ->headline();
@@ -33,20 +33,20 @@ class UserRelationManager extends RelationManager
 
     protected static function getModelLabel(): string
     {
-        return __('filament-spatie-roles-permissions::filament-spatie.section.users');
+        return __('filament-roles-permissions-policies::filament-spatie.section.users');
     }
 
     protected static function getPluralModelLabel(): string
     {
-        return __('filament-spatie-roles-permissions::filament-spatie.section.users');
+        return __('filament-roles-permissions-policies::filament-spatie.section.users');
     }
 
     public function form(Form $form): Form
     {
         return $form
             ->schema([
-                TextInput::make(config('filament-spatie-roles-permissions.user_name_column'))
-                    ->label(__('filament-spatie-roles-permissions::filament-spatie.field.name')),
+                TextInput::make(config('filament-roles-permissions-policies.user_name_column'))
+                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name')),
             ]);
     }
 
@@ -54,19 +54,19 @@ class UserRelationManager extends RelationManager
     {
         return $table
             // Support changing table heading by translations.
-            ->heading(__('filament-spatie-roles-permissions::filament-spatie.section.users'))
+            ->heading(__('filament-roles-permissions-policies::filament-spatie.section.users'))
             ->columns([
-                TextColumn::make(config('filament-spatie-roles-permissions.user_name_column'))
-                    ->label(__('filament-spatie-roles-permissions::filament-spatie.field.name'))
-                    ->searchable(config('filament-spatie-roles-permissions.user_name_searchable_columns', 'name') ?? true),
+                TextColumn::make(config('filament-roles-permissions-policies.user_name_column'))
+                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name'))
+                    ->searchable(config('filament-roles-permissions-policies.user_name_searchable_columns', 'name') ?? true),
             ])
             ->filters([
 
             ])->headerActions([
                 AttachAction::make()
-                    ->recordSelectSearchColumns(config('filament-spatie-roles-permissions.user_name_searchable_columns', ['name']))
+                    ->recordSelectSearchColumns(config('filament-roles-permissions-policies.user_name_searchable_columns', ['name']))
                     ->recordTitle(function ($record) {
-                        return $record->getAttributeValue(config('filament-spatie-roles-permissions.user_name_column', 'name'));
+                        return $record->getAttributeValue(config('filament-roles-permissions-policies.user_name_column', 'name'));
                     }),
             ])->actions([
                 DetachAction::make(),

@@ -24,7 +24,7 @@ class PermissionRelationManager extends RelationManager
      */
     public static function getTitle(Model $ownerRecord, string $pageClass): string
     {
-        return __('filament-spatie-roles-permissions::filament-spatie.section.permissions') ?? (string) str(static::getRelationshipName())
+        return __('filament-roles-permissions-policies::filament-spatie.section.permissions') ?? (string) str(static::getRelationshipName())
             ->kebab()
             ->replace('-', ' ')
             ->headline();
@@ -32,12 +32,12 @@ class PermissionRelationManager extends RelationManager
 
     protected static function getModelLabel(): string
     {
-        return __('filament-spatie-roles-permissions::filament-spatie.section.permission');
+        return __('filament-roles-permissions-policies::filament-spatie.section.permission');
     }
 
     protected static function getPluralModelLabel(): string
     {
-        return __('filament-spatie-roles-permissions::filament-spatie.section.permissions');
+        return __('filament-roles-permissions-policies::filament-spatie.section.permissions');
     }
 
     public function form(Form $form): Form
@@ -45,10 +45,10 @@ class PermissionRelationManager extends RelationManager
         return $form
             ->schema([
                 TextInput::make('name')
-                    ->label(__('filament-spatie-roles-permissions::filament-spatie.field.name')),
+                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name')),
                 TextInput::make('guard_name')
-                    ->label(__('filament-spatie-roles-permissions::filament-spatie.field.guard_name'))
-                    ->visible(fn () => config('filament-spatie-roles-permissions.should_show_guard', true)),
+                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.guard_name'))
+                    ->visible(fn () => config('filament-roles-permissions-policies.should_show_guard', true)),
             ]);
     }
 
@@ -56,15 +56,15 @@ class PermissionRelationManager extends RelationManager
     {
         return $table
             // Support changing table heading by translations.
-            ->heading(__('filament-spatie-roles-permissions::filament-spatie.section.permissions'))
+            ->heading(__('filament-roles-permissions-policies::filament-spatie.section.permissions'))
             ->columns([
                 TextColumn::make('name')
                     ->searchable()
-                    ->label(__('filament-spatie-roles-permissions::filament-spatie.field.name')),
+                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.name')),
                 TextColumn::make('guard_name')
                     ->searchable()
-                    ->label(__('filament-spatie-roles-permissions::filament-spatie.field.guard_name'))
-                    ->visible(fn () => config('filament-spatie-roles-permissions.should_show_guard', true)),
+                    ->label(__('filament-roles-permissions-policies::filament-spatie.field.guard_name'))
+                    ->visible(fn () => config('filament-roles-permissions-policies.should_show_guard', true)),
 
             ])
             ->filters([

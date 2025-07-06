@@ -9,14 +9,14 @@ class FilamentRolesPermissionsPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'filament-spatie-roles-permissions';
+        return 'filament-roles-permissions-policies';
     }
 
     public function register(Panel $panel): void
     {
         $panel
             ->resources(
-                config('filament-spatie-roles-permissions.resources')
+                config('filament-roles-permissions-policies.resources')
             );
     }
 

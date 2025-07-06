@@ -1,15 +1,9 @@
 # Description
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/althinect/filament-spatie-roles-permissions.svg?style=flat-square)](https://packagist.org/packages/althinect/filament-spatie-roles-permissions)
-[![Total Downloads](https://img.shields.io/packagist/dt/althinect/filament-spatie-roles-permissions.svg?style=flat-square)](https://packagist.org/packages/althinect/filament-spatie-roles-permissions)
-[![GitHub Actions](https://github.com/althinect/filament-spatie-roles-permissions/actions/workflows/main.yml/badge.svg)](https://github.com/Althinect/enum-permission)
-
-This plugin is built on top of [Spatie's Permission](https://spatie.be/docs/laravel-permission/v6/introduction) package. 
-
 Provides Resources for Roles and Permissions
 
 Permission and Policy generations
-- Check the ``config/filament-spatie-roles-permissions-config.php``
+- Check the ``config/filament-roles-permissions-policies-config.php``
 
 Supports permissions for teams
 - Make sure the ``teams`` attribute in the ``config/permission.php`` file is set to ``true``
@@ -19,19 +13,13 @@ Supports permissions for teams
 After performing a ```composer update```, run
 
 ```php
-php artisan vendor:publish --tag="filament-spatie-roles-permissions-config" --force
+php artisan vendor:publish --tag="filament-roles-permissions-policies-config" --force
 ```
 ***Note that your existing settings will be overriden***
 
 #### If you like our work Don't forget to STAR the project 
 
 ## Installation
-
-You can install the package via composer:
-
-```bash
-composer require althinect/filament-spatie-roles-permissions
-```
 
 Since the package depends on [Spatie's Permission](https://spatie.be/docs/laravel-permission/v5/introduction) package. You have to publish the migrations by running:
 ```bash
@@ -53,13 +41,13 @@ Now you should add any other configurations needed for the Spatie-Permission pac
 **Note:** This will override your existing config file.
 You can publish the config file of the package with:
 ```bash
-php artisan vendor:publish --tag="filament-spatie-roles-permissions-config" --force
+php artisan vendor:publish --tag="filament-roles-permissions-policies-config" --force
 ```
 
 You can publish translations with:
 
 ```bash
-php artisan vendor:publish --tag="filament-spatie-roles-permissions-translations"
+php artisan vendor:publish --tag="filament-roles-permissions-policies-translations"
 ```
 
 Don't forget to add the `HasRoles` trait to your User model.
@@ -243,7 +231,7 @@ Follow the instructions on [Filament Multi-tenancy](https://filamentphp.com/docs
 
 ### Configurations
 
-In the **filament-spatie-roles-permissions.php** config file, you can customize the permission generation
+In the **filament-roles-permissions-policies.php** config file, you can customize the permission generation
 
 ## Security
 
@@ -253,7 +241,7 @@ If you discover any security related issues, please create an issue.
 
 -   [Tharinda Rodrigo](https://github.com/tharindarodrigo/)
 -   [Udam Liyanage](https://github.com/UdamLiyanage/)
--   [Contributors](https://github.com/Althinect/filament-spatie-roles-permissions/graphs/contributors)
+-   [Contributors](https://github.com/Althinect/filament-roles-permissions-policies/graphs/contributors)
 
 ## License
 

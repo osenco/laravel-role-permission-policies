@@ -32,7 +32,7 @@ class Permission extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->config = config('filament-spatie-roles-permissions.generator');
+        $this->config = config('filament-roles-permissions-policies.generator');
     }
 
     /**
