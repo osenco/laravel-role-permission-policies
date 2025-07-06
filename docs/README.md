@@ -12,7 +12,7 @@
 
 ## Documentation, Installation, and Usage Instructions
 
-See the [documentation](https://osen.be/docs/laravel-permission/) for detailed installation and usage instructions.
+See the [documentation](https://osenco.github.io/laravel-role-permission-policies) for detailed installation and usage instructions.
 
 ## What It Does
 This package allows you to manage user permissions and roles in a database.
