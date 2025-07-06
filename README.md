@@ -38,12 +38,12 @@ $user->can('edit articles');
 ## Installation
 
 ```bash
-composer require laravel-role-permission-policies
+composer osenco/require osenco/laravel-role-permission-policies
 ```
 
 ## Filament
 
-Please see [FILAMENT](FILAMENT.md) for more information what has changed recently.
+Please see [FILAMENT](FILAMENT.md) for how to setup on Filament.
 
 ## Changelog
 

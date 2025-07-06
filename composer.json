@@ -1,5 +1,5 @@
 {
-    "name": "spatie/laravel-permission",
+    "name": "osenco/laravel-role-permission-policies",
     "description": "Permission handling for Laravel 8.0 and up",
     "license": "MIT",
     "keywords": [
@@ -18,9 +18,15 @@
             "email": "freek@spatie.be",
             "homepage": "https://spatie.be",
             "role": "Developer"
+        },
+        {
+            "name": "Osen Concepts",
+            "email": "hi@osen.co.ke",
+            "homepage": "https://osen.co.ke",
+            "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/spatie/laravel-permission",
+    "homepage": "https://github.com/osenco/laravel-role-permission-policies",
     "require": {
         "php": "^8.0",
         "filament/filament": "^3.0",
